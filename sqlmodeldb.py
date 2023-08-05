@@ -1,4 +1,5 @@
 from typing import Optional
+from pathlib import Path
 
 from sqlmodel import Field, Session, SQLModel, create_engine, select
 import sqlalchemy
@@ -19,6 +20,8 @@ engine = create_engine(sqlite_url, echo=False)
 
 
 def create_db_and_tables():
+    folder_path = Path.cwd() / 'data'
+    folder_path.mkdir(exist_ok=True)
     SQLModel.metadata.create_all(engine)
 
 
