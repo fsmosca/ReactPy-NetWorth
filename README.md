@@ -2,7 +2,7 @@
 
 Built with ReactPy, Bootstrap, SQLModel and Pandas, shows a summary of assets, liabilities and net worth. Deals or transactions are saved in sqlite database.
 
-![image](https://github.com/fsmosca/ReactPy-NetWorth/assets/22366935/d8175a05-4027-4275-8264-5d342d2e8dba)
+![image](https://github.com/fsmosca/ReactPy-NetWorth/assets/22366935/6f983de0-172f-4c6d-a0c5-beb15753990e)
 
 This repository is linked to my [blog](https://energybeam.blogspot.com/2023/08/how-to-create-income-and-expense-app-in.html) in blogspot.
 
