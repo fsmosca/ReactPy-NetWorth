@@ -1,6 +1,7 @@
 from typing import Optional
 
 from sqlmodel import Field, Session, SQLModel, create_engine, select
+import sqlalchemy
 
 
 class Deal(SQLModel, table=True):
@@ -48,6 +49,13 @@ def delete_deal(id_: int):
     with Session(engine) as session:
         statement = select(Deal).where(Deal.id == id_)
         results = session.exec(statement)
-        deal = results.one()
-        session.delete(deal)
-        session.commit()
+
+        try:
+            deal = results.one()
+        except sqlalchemy.exc.NoResultFound:
+            pass
+        except Exception as err:
+            print(repr(err))
+        else:
+            session.delete(deal)
+            session.commit()
