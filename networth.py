@@ -26,24 +26,11 @@ PAGE_HEADER_TITLE = 'ReactPy-NetWorth'
 CARD_TEXT_COLOR = {'Assets': 'text-success', 'Liabilities': 'text-danger',
                    'Net Worth': 'text-primary'}
 
-CAT_OPTIONS = [
-    html.option('Clothing'),
-    html.option('Donation'),
-    html.option('Education'),
-    html.option('Food'),
-    html.option('Healthcare'),
-    html.option('Housing'),
-    html.option('Income'),
-    html.option('Insurance'),
-    html.option('Loans'),
-    html.option('Others'),
-    html.option('Personals'),
-    html.option('Recreation'),
-    html.option('Retirement'),
-    html.option('Supplies'),
-    html.option('Transportation'),
-    html.option('Utilities')
-]
+
+CAT_OPTIONS = ['Clothing', 'Donation', 'Education', 'Food', 'Healthcare',
+               'Housing', 'Income', 'Insurance', 'Loans', 'Others',
+               'Personals', 'Recreation', 'Retirement', 'Supplies',
+               'Transportation', 'Utilities']
 
 
 def get_records(db) -> list[list]:
@@ -53,6 +40,10 @@ def get_records(db) -> list[list]:
         db: A list of Deal class from sqlmodeldb module.
     """
     return [[da.id, da.date, da.value, da.category, da.comment] for da in db]
+
+
+def select_options():
+    return [html.option(opt) for opt in CAT_OPTIONS]
 
 
 @component
@@ -121,7 +112,7 @@ def FormSelect(category, set_category):
                 'on_change': lambda event: set_category(event['target']['value']),
                 'value': category,
             },
-            CAT_OPTIONS,
+            select_options(),
         ),
     )
 
