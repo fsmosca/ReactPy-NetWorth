@@ -8,15 +8,33 @@ This repository is linked to my [blog](https://energybeam.blogspot.com/2023/08/h
 
 ## Setup
 
-Clone the repository with.
+1. Install Python version 3.9 or newer
+
+2. Clone the repository from command line.
 
 ```
 git clone https://github.com/fsmosca/ReactPy-NetWorth.git
 ```
 
-### Important
+3. Change directory to reactpy-networth.
 
-The database is saved under the folder data. Be sure you have the data folder in the same directory with networth.py. Another module that is used by this app is the sqlmodeldb.py. Retrieving, adding and deleting entries are handled by this module.
+```
+cd reactpy-networth
+```
+
+4. Install requirements.
+
+```
+pip install -r requirements.txt
+```
+
+5. Run the app.
+
+```
+uvicorn networth:app
+```
+
+6. Follow instruction from the console. Paste the given url to browser to open the app.
 
 ## Credits
 
