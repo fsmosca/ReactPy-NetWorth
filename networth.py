@@ -40,7 +40,11 @@ CAT_OPTIONS = [
 
 
 def get_records(db) -> list[list]:
-    """Converts db to list of list."""
+    """Converts db to list of list.
+    
+    Args:
+        db: A list of Deal class from sqlmodeldb module.
+    """
     return [[da.id, da.date, da.value, da.category, da.comment] for da in db]
 
 
@@ -187,7 +191,10 @@ def FormDeleteButton():
 
 @component
 def Card(label, amount):
-    """Shows asset, liability and net worth info."""
+    """Shows label and amount in a bootstrap card.
+    
+    Text color is styled depending on the label and amount.
+    """
     text_color = CARD_TEXT_COLOR[label]
     if label == 'Net Worth' and amount < 0:
         text_color = 'text-warning'
@@ -215,7 +222,15 @@ def Card(label, amount):
 
 @component
 def Summary():
-    """Shows the assest, liability and net worth elements."""
+    """Generates three cards for asset, liability and net worth.
+
+    These cards are displayed in a row at the top of the page.    
+    The asset and liablity values are taken from the sqlite database
+    using SQLModel library.
+
+    All positive amounts are assets whereas all negative
+    amounts are liabilities.
+    """
     db_results = select_deals()
     records = get_records(db_results)
 
