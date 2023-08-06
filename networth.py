@@ -27,15 +27,22 @@ CARD_TEXT_COLOR = {'Assets': 'text-success', 'Liabilities': 'text-danger',
                    'Net Worth': 'text-primary'}
 
 CAT_OPTIONS = [
+    html.option('Clothing'),
+    html.option('Donation'),
+    html.option('Education'),
     html.option('Food'),
     html.option('Healthcare'),
     html.option('Housing'),
     html.option('Income'),
+    html.option('Insurance'),
     html.option('Loans'),
     html.option('Others'),
+    html.option('Personals'),
     html.option('Recreation'),
+    html.option('Retirement'),
+    html.option('Supplies'),
     html.option('Transportation'),
-    html.option('Utilities'),
+    html.option('Utilities')
 ]
 
 
