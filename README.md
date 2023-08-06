@@ -2,6 +2,8 @@
 
 Built with ReactPy, Bootstrap, SQLModel and Pandas, shows a summary of assets, liabilities and net worth. Deals or transactions are saved in sqlite database.
 
+This app will create a folder called `data` in the directory where networth is located. Under this data folder, it creates a file called networth.db. The networth.db is an sqlite file that stores saved deals by the users.
+
 ![image](https://github.com/fsmosca/ReactPy-NetWorth/assets/22366935/6f983de0-172f-4c6d-a0c5-beb15753990e)
 
 This repository is linked to my [blog](https://energybeam.blogspot.com/2023/08/how-to-create-income-and-expense-app-in.html) in blogspot.
