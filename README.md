@@ -40,7 +40,8 @@ uvicorn networth:app
 
 ## Credits
 
-* [ReactPy](https://github.com/reactive-python/reactpy)
+* [ReactPy Github](https://github.com/reactive-python/reactpy)
+* [ReactPy Docs](https://reactpy.dev/docs/guides/getting-started/index.html)
 * [Bootstrap](https://getbootstrap.com/docs/5.2/getting-started/introduction/)
 * [SQLModel](https://sqlmodel.tiangolo.com/)
 * [Pandas](https://pandas.pydata.org/getting_started.html)
