@@ -2,3 +2,4 @@ reactpy[fastapi]
 sqlmodel
 reactpy-flake8
 pandas
+uvicorn[standard]
